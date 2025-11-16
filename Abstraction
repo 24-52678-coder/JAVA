@@ -1,0 +1,56 @@
+abstract class Vehicle {
+    String brand;
+
+    abstract void startEngine();
+
+    void stopEngine() {
+        System.out.println(brand + " engine stopped.");
+    }
+}
+
+class Car extends Vehicle {
+    String model;
+    int year;
+
+    Car(String brand, String model, int year) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+    }
+
+    @Override
+    void startEngine() {
+        System.out.println(brand + " " + model + " " + year + " engine started using push button.");
+    }
+}
+
+class Motorcycle extends Vehicle {
+    String model;
+    int year;
+
+    Motorcycle(String brand, String model, int year) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+    }
+
+    @Override
+    void startEngine() {
+        System.out.println(brand + " " + model + " " + year + " engine started using kick start.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Vehicle myCar = new Car("Toyota", "Vios", 2024);
+        Vehicle myMotorcycle = new Motorcycle("Honda", "CB150R", 2023);
+
+        myCar.startEngine();
+        myCar.stopEngine();
+
+        System.out.println();
+
+        myMotorcycle.startEngine();
+        myMotorcycle.stopEngine();
+    }
+}
