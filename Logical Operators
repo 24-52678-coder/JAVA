@@ -1,0 +1,25 @@
+public class LogicalOperatorsDemo {
+    public static void main(String[] args) {
+        int age = 20;
+        boolean hasID = true;
+        boolean isStudent = false;
+
+        if (age >= 18 && hasID) {
+            System.out.println("Access granted: Age is 18+ AND has ID.");
+        } else {
+            System.out.println("Access denied.");
+        }
+
+        if (isStudent || age < 18) {
+            System.out.println("Discount applied: Either student OR under 18.");
+        } else {
+            System.out.println("No discount.");
+        }
+
+        if (!hasID) {
+            System.out.println("You must bring your ID!");
+        } else {
+            System.out.println("ID verified.");
+        }
+    }
+}
