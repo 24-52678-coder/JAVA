@@ -1,0 +1,61 @@
+class Car {
+    String brand;
+    String model;
+    String variation;
+    String transmission;
+    int year;
+
+    void displayInfo() {
+        System.out.println("Car details:");
+    }
+}
+
+class Toyota extends Car {
+    Toyota(String model, String variation, String transmission, int year) {
+        this.brand = "Toyota";
+        this.model = model;
+        this.variation = variation;
+        this.transmission = transmission;
+        this.year = year;
+    }
+
+    @Override
+    void displayInfo() {
+        System.out.println("Car Brand: " + brand);
+        System.out.println("Model: " + model);
+        System.out.println("Variation: " + variation);
+        System.out.println("Transmission: " + transmission);
+        System.out.println("Year: " + year);
+    }
+}
+
+class MercedesBenz extends Car {
+    MercedesBenz(String model, String variation, String transmission, int year) {
+        this.brand = "Mercedes-Benz";
+        this.model = model;
+        this.variation = variation;
+        this.transmission = transmission;
+        this.year = year;
+    }
+
+    @Override
+    void displayInfo() {
+        System.out.println("Car Brand: " + brand);
+        System.out.println("Model: " + model);
+        System.out.println("Variation: " + variation);
+        System.out.println("Transmission: " + transmission);
+        System.out.println("Year: " + year);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Car myToyota = new Toyota("Vios", "1.5 G CVT", "Automatic", 2024);
+        Car myMercedes = new MercedesBenz("C-Class", "C 200 Avantgarde", "9G-TRONIC Automatic", 2025);
+
+        myToyota.displayInfo();
+        System.out.println();
+        myMercedes.displayInfo();
+    }
+}
