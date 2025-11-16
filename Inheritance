@@ -1,0 +1,35 @@
+class Vehicle {
+    String brand;
+
+    void start() {
+        System.out.println(brand + " engine started.");
+    }
+
+    void stop() {
+        System.out.println(brand + " engine stopped.");
+    }
+}
+
+class Car extends Vehicle {
+    String model;
+    int year;
+
+    void displayInfo() {
+        System.out.println("Car Brand: " + brand);
+        System.out.println("Model: " + model + " " + year);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car myCar = new Car();
+        myCar.brand = "Toyota";
+        myCar.model = "Vios";
+        myCar.year = 2024;
+
+        myCar.start();
+        myCar.stop();
+
+        myCar.displayInfo();
+    }
+}
